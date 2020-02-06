@@ -1,0 +1,2 @@
+verilog work "ipcore_dir/Transfer_FIFO.v"
+verilog work "CIC_data_transferFIFO.v"

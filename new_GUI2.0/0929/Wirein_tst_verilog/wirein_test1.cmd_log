@@ -1,0 +1,45 @@
+xst -intstyle ise -ifn "F:/Wirein_tst/wirein_test1.xst" -ofn "F:/Wirein_tst/wirein_test1.syr" 
+xst -intstyle ise -ifn "F:/Wirein_tst/wirein_test1.xst" -ofn "F:/Wirein_tst/wirein_test1.syr" 
+xst -intstyle ise -ifn "F:/Wirein_tst/wirein_test1.xst" -ofn "F:/Wirein_tst/wirein_test1.syr" 
+xst -intstyle ise -ifn "F:/Wirein_tst/wirein_test1.xst" -ofn "F:/Wirein_tst/wirein_test1.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc xem6310.ucf -p xc6slx45-fgg484-2 wirein_test1.ngc wirein_test1.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o wirein_test1_map.ncd wirein_test1.ngd wirein_test1.pcf 
+par -w -intstyle ise -ol high -mt off wirein_test1_map.ncd wirein_test1.ncd wirein_test1.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml wirein_test1.twx wirein_test1.ncd -o wirein_test1.twr wirein_test1.pcf -ucf xem6310.ucf 
+bitgen -intstyle ise -f wirein_test1.ut wirein_test1.ncd 
+xst -intstyle ise -ifn "F:/Wirein_tst/wirein_test1.xst" -ofn "F:/Wirein_tst/wirein_test1.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc xem6310.ucf -p xc6slx45-fgg484-2 wirein_test1.ngc wirein_test1.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o wirein_test1_map.ncd wirein_test1.ngd wirein_test1.pcf 
+par -w -intstyle ise -ol high -mt off wirein_test1_map.ncd wirein_test1.ncd wirein_test1.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml wirein_test1.twx wirein_test1.ncd -o wirein_test1.twr wirein_test1.pcf -ucf xem6310.ucf 
+bitgen -intstyle ise -f wirein_test1.ut wirein_test1.ncd 
+xst -intstyle ise -ifn "F:/Wirein_tst/wirein_test1.xst" -ofn "F:/Wirein_tst/wirein_test1.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc xem6310.ucf -p xc6slx45-fgg484-2 wirein_test1.ngc wirein_test1.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o wirein_test1_map.ncd wirein_test1.ngd wirein_test1.pcf 
+par -w -intstyle ise -ol high -mt off wirein_test1_map.ncd wirein_test1.ncd wirein_test1.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml wirein_test1.twx wirein_test1.ncd -o wirein_test1.twr wirein_test1.pcf -ucf xem6310.ucf 
+bitgen -intstyle ise -f wirein_test1.ut wirein_test1.ncd 
+xst -intstyle ise -ifn "F:/Wirein_tst/wirein_test1.xst" -ofn "F:/Wirein_tst/wirein_test1.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc xem6310.ucf -p xc6slx45-fgg484-2 wirein_test1.ngc wirein_test1.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o wirein_test1_map.ncd wirein_test1.ngd wirein_test1.pcf 
+par -w -intstyle ise -ol high -mt off wirein_test1_map.ncd wirein_test1.ncd wirein_test1.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml wirein_test1.twx wirein_test1.ncd -o wirein_test1.twr wirein_test1.pcf -ucf xem6310.ucf 
+bitgen -intstyle ise -f wirein_test1.ut wirein_test1.ncd 
+xst -intstyle ise -ifn "F:/Wirein_tst/wirein_test1.xst" -ofn "F:/Wirein_tst/wirein_test1.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc xem6310.ucf -p xc6slx45-fgg484-2 wirein_test1.ngc wirein_test1.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o wirein_test1_map.ncd wirein_test1.ngd wirein_test1.pcf 
+par -w -intstyle ise -ol high -mt off wirein_test1_map.ncd wirein_test1.ncd wirein_test1.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml wirein_test1.twx wirein_test1.ncd -o wirein_test1.twr wirein_test1.pcf -ucf xem6310.ucf 
+bitgen -intstyle ise -f wirein_test1.ut wirein_test1.ncd 
+xst -intstyle ise -ifn "F:/Wirein_tst/wirein_test1.xst" -ofn "F:/Wirein_tst/wirein_test1.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc xem6310.ucf -p xc6slx45-fgg484-2 wirein_test1.ngc wirein_test1.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o wirein_test1_map.ncd wirein_test1.ngd wirein_test1.pcf 
+par -w -intstyle ise -ol high -mt off wirein_test1_map.ncd wirein_test1.ncd wirein_test1.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml wirein_test1.twx wirein_test1.ncd -o wirein_test1.twr wirein_test1.pcf -ucf xem6310.ucf 
+bitgen -intstyle ise -f wirein_test1.ut wirein_test1.ncd 
+xst -intstyle ise -ifn "F:/Wirein_tst/wirein_test1.xst" -ofn "F:/Wirein_tst/wirein_test1.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc xem6310.ucf -p xc6slx45-fgg484-2 wirein_test1.ngc wirein_test1.ngd  
+map -intstyle ise -p xc6slx45-fgg484-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o wirein_test1_map.ncd wirein_test1.ngd wirein_test1.pcf 
+par -w -intstyle ise -ol high -mt off wirein_test1_map.ncd wirein_test1.ncd wirein_test1.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml wirein_test1.twx wirein_test1.ncd -o wirein_test1.twr wirein_test1.pcf -ucf xem6310.ucf 
+bitgen -intstyle ise -f wirein_test1.ut wirein_test1.ncd 

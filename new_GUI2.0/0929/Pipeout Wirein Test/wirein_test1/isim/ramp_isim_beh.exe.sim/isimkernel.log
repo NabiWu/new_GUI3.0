@@ -1,0 +1,29 @@
+Command line:
+   ramp_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  55297
+
+Fri Jun 29 10:30:47 2018
+
+
+ Elaboration Time: 0.046875 sec
+
+ Current Memory Usage: 1721.97 Meg
+
+ Total Signals          : 16
+ Total Nets             : 17
+ Total Signal Drivers   : 6
+ Total Blocks           : 2
+ Total Primitive Blocks : 2
+ Total Processes        : 8
+ Total Traceable Variables  : 21
+ Total Scalar Nets and Variables : 100
+Total Line Count : 34
+
+ Total Simulation Time: 0.046875 sec
+
+ Current Memory Usage: 1407.37 Meg
+
+Fri Jun 29 10:32:46 2018
+

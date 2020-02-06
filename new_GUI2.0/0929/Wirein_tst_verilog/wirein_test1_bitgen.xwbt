@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=F:\Wirein_tst\wirein_test1.ncd
+OUTFILE=F:\Wirein_tst\wirein_test1.bit
+FAMILY=Spartan6
+PART=xc6slx45-2fgg484
+WORKINGDIR=F:\Wirein_tst
+LICENSE=WebPack
+USER_INFO=211373772_0_0_117

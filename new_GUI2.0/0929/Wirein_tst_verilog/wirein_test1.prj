@@ -1,0 +1,6 @@
+verilog work "ipcore_dir/Asyn_FIFO.v"
+verilog work "ramp.v"
+verilog work "okLibrary.v"
+verilog work "cont_dataTransfer_FIFO.v"
+verilog work "clk_div_v3.v"
+verilog work "wirein_test1.v"

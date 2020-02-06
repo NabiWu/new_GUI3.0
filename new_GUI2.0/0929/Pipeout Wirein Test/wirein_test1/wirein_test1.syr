@@ -1,0 +1,693 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.35 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.35 secs
+ 
+--> Reading design: wirein_test1.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "wirein_test1.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "wirein_test1"
+Output Format                      : NGC
+Target Device                      : xc6slx16-2-ftg256
+
+---- Source Options
+Top Module Name                    : wirein_test1
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\Nanolab3\Desktop\Mayank\verilog\wirein_test1\ipcore_dir\Transfer_FIFO.v" into library work
+Parsing module <Transfer_FIFO>.
+Analyzing Verilog file "C:\Users\Nanolab3\Desktop\Mayank\verilog\wirein_test1\ramp.v" into library work
+Parsing module <ramp>.
+WARNING:HDLCompiler:751 - "C:\Users\Nanolab3\Desktop\Mayank\verilog\wirein_test1\ramp.v" Line 10: Redeclaration of ansi port data_out is not allowed
+Analyzing Verilog file "C:\Users\Nanolab3\Desktop\Mayank\verilog\wirein_test1\okLibrary.v" into library work
+Parsing module <okHost>.
+Parsing module <okCore>.
+Parsing module <okWireIn>.
+Parsing module <okWireOut>.
+Parsing module <okTriggerIn>.
+Parsing module <okTriggerOut>.
+Parsing module <okPipeIn>.
+Parsing module <okPipeOut>.
+Parsing module <okBTPipeIn>.
+Parsing module <okBTPipeOut>.
+Parsing module <okWireOR>.
+Analyzing Verilog file "C:\Users\Nanolab3\Desktop\Mayank\verilog\wirein_test1\CIC_data_transferFIFO.v" into library work
+Parsing module <CIC_data_transferFIFO>.
+Analyzing Verilog file "C:\Users\Nanolab3\Desktop\Mayank\verilog\wirein_test1\wirein_test1.v" into library work
+Parsing module <wirein_test1>.
+WARNING:HDLCompiler:751 - "C:\Users\Nanolab3\Desktop\Mayank\verilog\wirein_test1\wirein_test1.v" Line 11: Redeclaration of ansi port hi_in is not allowed
+WARNING:HDLCompiler:751 - "C:\Users\Nanolab3\Desktop\Mayank\verilog\wirein_test1\wirein_test1.v" Line 12: Redeclaration of ansi port hi_out is not allowed
+WARNING:HDLCompiler:751 - "C:\Users\Nanolab3\Desktop\Mayank\verilog\wirein_test1\wirein_test1.v" Line 13: Redeclaration of ansi port hi_inout is not allowed
+WARNING:HDLCompiler:751 - "C:\Users\Nanolab3\Desktop\Mayank\verilog\wirein_test1\wirein_test1.v" Line 14: Redeclaration of ansi port hi_muxsel is not allowed
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <wirein_test1>.
+WARNING:HDLCompiler:1127 - "C:\Users\Nanolab3\Desktop\Mayank\verilog\wirein_test1\wirein_test1.v" Line 46: Assignment to tmp_1 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\Nanolab3\Desktop\Mayank\verilog\wirein_test1\wirein_test1.v" Line 49: Assignment to clk_bar ignored, since the identifier is never used
+
+Elaborating module <ramp>.
+WARNING:HDLCompiler:413 - "C:\Users\Nanolab3\Desktop\Mayank\verilog\wirein_test1\ramp.v" Line 30: Result of 8-bit expression is truncated to fit in 7-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Nanolab3\Desktop\Mayank\verilog\wirein_test1\ramp.v" Line 38: Result of 32-bit expression is truncated to fit in 7-bit target.
+
+Elaborating module <CIC_data_transferFIFO>.
+WARNING:HDLCompiler:413 - "C:\Users\Nanolab3\Desktop\Mayank\verilog\wirein_test1\CIC_data_transferFIFO.v" Line 52: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Nanolab3\Desktop\Mayank\verilog\wirein_test1\CIC_data_transferFIFO.v" Line 96: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Nanolab3\Desktop\Mayank\verilog\wirein_test1\CIC_data_transferFIFO.v" Line 143: Result of 9-bit expression is truncated to fit in 8-bit target.
+
+Elaborating module <Transfer_FIFO>.
+WARNING:HDLCompiler:1499 - "C:\Users\Nanolab3\Desktop\Mayank\verilog\wirein_test1\ipcore_dir\Transfer_FIFO.v" Line 39: Empty module <Transfer_FIFO> remains a black box.
+WARNING:HDLCompiler:1016 - "C:\Users\Nanolab3\Desktop\Mayank\verilog\wirein_test1\okLibrary.v" Line 34: Port CLK180 is not connected to this instance
+WARNING:HDLCompiler:1016 - "C:\Users\Nanolab3\Desktop\Mayank\verilog\wirein_test1\okLibrary.v" Line 62: Port BUSY is not connected to this instance
+
+Elaborating module <okHost>.
+
+Elaborating module <DCM_SP>.
+
+Elaborating module <BUFG>.
+
+Elaborating module <FDS>.
+
+Elaborating module <FD>.
+
+Elaborating module <IOBUF>.
+
+Elaborating module <IODELAY2(IDELAY_TYPE="FIXED",IDELAY_VALUE=50,DELAY_SRC="IDATAIN")>.
+
+Elaborating module <FDRE>.
+
+Elaborating module <OBUF>.
+
+Elaborating module <okCore>.
+WARNING:HDLCompiler:1127 - "C:\Users\Nanolab3\Desktop\Mayank\verilog\wirein_test1\wirein_test1.v" Line 70: Assignment to ti_clk ignored, since the identifier is never used
+
+Elaborating module <okWireOR(N=1)>.
+
+Elaborating module <okWireIn>.
+
+Elaborating module <okBTPipeOut>.
+WARNING:HDLCompiler:1127 - "C:\Users\Nanolab3\Desktop\Mayank\verilog\wirein_test1\wirein_test1.v" Line 82: Assignment to epA0_blockSTROBE ignored, since the identifier is never used
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <wirein_test1>.
+    Related source file is "C:\Users\Nanolab3\Desktop\Mayank\verilog\wirein_test1\wirein_test1.v".
+INFO:Xst:3210 - "C:\Users\Nanolab3\Desktop\Mayank\verilog\wirein_test1\wirein_test1.v" line 69: Output port <ti_clk> of the instance <okHI> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Nanolab3\Desktop\Mayank\verilog\wirein_test1\wirein_test1.v" line 82: Output port <ep_blockstrobe> of the instance <pipeOutA0> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <wirein_test1> synthesized.
+
+Synthesizing Unit <ramp>.
+    Related source file is "C:\Users\Nanolab3\Desktop\Mayank\verilog\wirein_test1\ramp.v".
+    Found 1-bit register for signal <s1>.
+    Found 7-bit register for signal <count>.
+    Found 7-bit adder for signal <_n0038> created at line 30.
+    Found 7-bit subtractor for signal <_n0035> created at line 39.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred   8 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <ramp> synthesized.
+
+Synthesizing Unit <CIC_data_transferFIFO>.
+    Related source file is "C:\Users\Nanolab3\Desktop\Mayank\verilog\wirein_test1\CIC_data_transferFIFO.v".
+    Found 8-bit register for signal <count2>.
+    Found 8-bit register for signal <count3>.
+    Found 8-bit register for signal <count1>.
+    Found 1-bit register for signal <s1>.
+    Found 1-bit register for signal <mark1>.
+    Found 1-bit register for signal <write_en>.
+    Found 1-bit register for signal <s2>.
+    Found 1-bit register for signal <read_en>.
+    Found 1-bit register for signal <s3>.
+    Found 1-bit register for signal <s3_1>.
+    Found 8-bit adder for signal <_n0104> created at line 52.
+    Found 8-bit adder for signal <_n0112> created at line 96.
+    Found 8-bit adder for signal <_n0101> created at line 143.
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred  31 D-type flip-flop(s).
+	inferred   4 Multiplexer(s).
+Unit <CIC_data_transferFIFO> synthesized.
+
+Synthesizing Unit <okHost>.
+    Related source file is "C:\Users\Nanolab3\Desktop\Mayank\verilog\wirein_test1\okLibrary.v".
+    Set property "IOB = TRUE" for instance <delays[0].fdrein0>.
+    Set property "IOB = TRUE" for instance <delays[0].fdreout0>.
+    Set property "IOB = TRUE" for instance <delays[0].fdreout1>.
+    Set property "IOB = TRUE" for instance <delays[1].fdrein0>.
+    Set property "IOB = TRUE" for instance <delays[1].fdreout0>.
+    Set property "IOB = TRUE" for instance <delays[1].fdreout1>.
+    Set property "IOB = TRUE" for instance <delays[2].fdrein0>.
+    Set property "IOB = TRUE" for instance <delays[2].fdreout0>.
+    Set property "IOB = TRUE" for instance <delays[2].fdreout1>.
+    Set property "IOB = TRUE" for instance <delays[3].fdrein0>.
+    Set property "IOB = TRUE" for instance <delays[3].fdreout0>.
+    Set property "IOB = TRUE" for instance <delays[3].fdreout1>.
+    Set property "IOB = TRUE" for instance <delays[4].fdrein0>.
+    Set property "IOB = TRUE" for instance <delays[4].fdreout0>.
+    Set property "IOB = TRUE" for instance <delays[4].fdreout1>.
+    Set property "IOB = TRUE" for instance <delays[5].fdrein0>.
+    Set property "IOB = TRUE" for instance <delays[5].fdreout0>.
+    Set property "IOB = TRUE" for instance <delays[5].fdreout1>.
+    Set property "IOB = TRUE" for instance <delays[6].fdrein0>.
+    Set property "IOB = TRUE" for instance <delays[6].fdreout0>.
+    Set property "IOB = TRUE" for instance <delays[6].fdreout1>.
+    Set property "IOB = TRUE" for instance <delays[7].fdrein0>.
+    Set property "IOB = TRUE" for instance <delays[7].fdreout0>.
+    Set property "IOB = TRUE" for instance <delays[7].fdreout1>.
+    Set property "IOB = TRUE" for instance <delays[8].fdrein0>.
+    Set property "IOB = TRUE" for instance <delays[8].fdreout0>.
+    Set property "IOB = TRUE" for instance <delays[8].fdreout1>.
+    Set property "IOB = TRUE" for instance <delays[9].fdrein0>.
+    Set property "IOB = TRUE" for instance <delays[9].fdreout0>.
+    Set property "IOB = TRUE" for instance <delays[9].fdreout1>.
+    Set property "IOB = TRUE" for instance <delays[10].fdrein0>.
+    Set property "IOB = TRUE" for instance <delays[10].fdreout0>.
+    Set property "IOB = TRUE" for instance <delays[10].fdreout1>.
+    Set property "IOB = TRUE" for instance <delays[11].fdrein0>.
+    Set property "IOB = TRUE" for instance <delays[11].fdreout0>.
+    Set property "IOB = TRUE" for instance <delays[11].fdreout1>.
+    Set property "IOB = TRUE" for instance <delays[12].fdrein0>.
+    Set property "IOB = TRUE" for instance <delays[12].fdreout0>.
+    Set property "IOB = TRUE" for instance <delays[12].fdreout1>.
+    Set property "IOB = TRUE" for instance <delays[13].fdrein0>.
+    Set property "IOB = TRUE" for instance <delays[13].fdreout0>.
+    Set property "IOB = TRUE" for instance <delays[13].fdreout1>.
+    Set property "IOB = TRUE" for instance <delays[14].fdrein0>.
+    Set property "IOB = TRUE" for instance <delays[14].fdreout0>.
+    Set property "IOB = TRUE" for instance <delays[14].fdreout1>.
+    Set property "IOB = TRUE" for instance <delays[15].fdrein0>.
+    Set property "IOB = TRUE" for instance <delays[15].fdreout0>.
+    Set property "IOB = TRUE" for instance <delays[15].fdreout1>.
+    Summary:
+	no macro.
+Unit <okHost> synthesized.
+
+Synthesizing Unit <okWireOR>.
+    Related source file is "C:\Users\Nanolab3\Desktop\Mayank\verilog\wirein_test1\okLibrary.v".
+        N = 1
+    Summary:
+	no macro.
+Unit <okWireOR> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 5
+ 7-bit adder                                           : 1
+ 7-bit subtractor                                      : 1
+ 8-bit adder                                           : 3
+# Registers                                            : 12
+ 1-bit register                                        : 8
+ 7-bit register                                        : 1
+ 8-bit register                                        : 3
+# Multiplexers                                         : 5
+ 1-bit 2-to-1 multiplexer                              : 1
+ 7-bit 2-to-1 multiplexer                              : 1
+ 8-bit 2-to-1 multiplexer                              : 3
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <okWireIn.ngc>.
+Reading core <okBTPipeOut.ngc>.
+Reading core <okCore.ngc>.
+Reading core <ipcore_dir/Transfer_FIFO.ngc>.
+Loading core <okWireIn> for timing and area information for instance <ep00>.
+Loading core <okWireIn> for timing and area information for instance <ep01>.
+Loading core <okWireIn> for timing and area information for instance <ep02>.
+Loading core <okBTPipeOut> for timing and area information for instance <pipeOutA0>.
+Loading core <okCore> for timing and area information for instance <hicore>.
+Loading core <Transfer_FIFO> for timing and area information for instance <X0>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 5
+ 7-bit adder                                           : 1
+ 7-bit subtractor                                      : 1
+ 8-bit adder                                           : 3
+# Registers                                            : 91
+ Flip-Flops                                            : 91
+# Multiplexers                                         : 5
+ 1-bit 2-to-1 multiplexer                              : 1
+ 7-bit 2-to-1 multiplexer                              : 1
+ 8-bit 2-to-1 multiplexer                              : 3
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <wirein_test1> ...
+
+Optimizing unit <okHost> ...
+
+Optimizing unit <ramp> ...
+
+Optimizing unit <CIC_data_transferFIFO> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block wirein_test1, actual ratio is 3.
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i> in Unit <transfer/X0> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <transfer/X0> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <transfer/X0> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <transfer/X0> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i> in Unit <transfer/X0> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <transfer/X0> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <transfer/X0> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <transfer/X0> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 91
+ Flip-Flops                                            : 91
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : wirein_test1.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 363
+#      GND                         : 4
+#      INV                         : 23
+#      LUT1                        : 1
+#      LUT2                        : 79
+#      LUT3                        : 24
+#      LUT4                        : 48
+#      LUT5                        : 45
+#      LUT6                        : 93
+#      MUXCY                       : 30
+#      MUXF7                       : 2
+#      VCC                         : 3
+#      XORCY                       : 11
+# FlipFlops/Latches                : 402
+#      FD                          : 12
+#      FDC                         : 86
+#      FDC_1                       : 2
+#      FDCE                        : 68
+#      FDCE_1                      : 7
+#      FDE                         : 35
+#      FDP                         : 14
+#      FDPE                        : 2
+#      FDPE_1                      : 1
+#      FDR                         : 29
+#      FDRE                        : 144
+#      FDS                         : 2
+# RAMS                             : 1
+#      RAMB16BWER                  : 1
+# Clock Buffers                    : 3
+#      BUFG                        : 1
+#      BUFGP                       : 2
+# IO Buffers                       : 27
+#      IBUF                        : 7
+#      IBUFG                       : 1
+#      IOBUF                       : 16
+#      OBUF                        : 3
+# DCMs                             : 1
+#      DCM_SP                      : 1
+# Others                           : 16
+#      IODELAY2                    : 16
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16ftg256-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             354  out of  18224     1%  
+ Number of Slice LUTs:                  313  out of   9112     3%  
+    Number used as Logic:               313  out of   9112     3%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    516
+   Number with an unused Flip Flop:     162  out of    516    31%  
+   Number with an unused LUT:           203  out of    516    39%  
+   Number of fully used LUT-FF pairs:   151  out of    516    29%  
+   Number of unique control sets:        38
+
+IO Utilization: 
+ Number of IOs:                          29
+ Number of bonded IOBs:                  29  out of    186    15%  
+    IOB Flip Flops/Latches:              48
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                1  out of     32     3%  
+    Number using Block RAM only:          1
+ Number of BUFG/BUFGCTRLs:                3  out of     16    18%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+hi_in<0>                           | DCM_SP:CLK0            | 218   |
+clock                              | BUFGP                  | 98    |
+clock2                             | BUFGP                  | 88    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 6.949ns (Maximum Frequency: 143.906MHz)
+   Minimum input arrival time before clock: 6.352ns
+   Maximum output required time after clock: 4.118ns
+   Maximum combinational path delay: 1.328ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'hi_in<0>'
+  Clock period: 6.949ns (frequency: 143.906MHz)
+  Total number of paths / destination ports: 1858 / 407
+-------------------------------------------------------------------------
+Delay:               6.949ns (Levels of Logic = 6)
+  Source:            okHI/hicore/ti_addr_1 (FF)
+  Destination:       okHI/hicore/hi_busy (FF)
+  Source Clock:      hi_in<0> rising
+  Destination Clock: hi_in<0> rising
+
+  Data Path: okHI/hicore/ti_addr_1 to okHI/hicore/hi_busy
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             11   0.525   1.469  ti_addr_1 (ok1<17>)
+     end scope: 'okHI/hicore:ok1<17>'
+     begin scope: 'pipeOutA0:ok1<17>'
+     LUT6:I1->O            1   0.254   1.137  ti_addr[7]_ep_addr[7]_equal_4_o81 (ti_addr[7]_ep_addr[7]_equal_4_o8)
+     LUT6:I0->O           19   0.254   1.369  ti_addr[7]_ep_addr[7]_equal_4_o83 (ti_addr[7]_ep_addr[7]_equal_4_o)
+     LUT2:I0->O            1   0.250   0.681  Mmux_ok281 (ok2<16>)
+     end scope: 'pipeOutA0:ok2<16>'
+     begin scope: 'okHI/hicore:ok2<16>'
+     INV:I->O              1   0.255   0.681  hi_busy_rstpot1_INV_0 (hi_busy_rstpot)
+     FD:D                      0.074          hi_busy
+    ----------------------------------------
+    Total                      6.949ns (1.612ns logic, 5.337ns route)
+                                       (23.2% logic, 76.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clock'
+  Clock period: 6.572ns (frequency: 152.161MHz)
+  Total number of paths / destination ports: 531 / 213
+-------------------------------------------------------------------------
+Delay:               3.286ns (Levels of Logic = 2)
+  Source:            transfer/write_en (FF)
+  Destination:       transfer/X0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_d1_9 (FF)
+  Source Clock:      clock falling
+  Destination Clock: clock rising
+
+  Data Path: transfer/write_en to transfer/X0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_d1_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC_1:C->Q            5   0.525   0.949  transfer/write_en (transfer/write_en)
+     begin scope: 'transfer/X0:wr_en'
+     LUT2:I0->O           19   0.250   1.260  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/ram_wr_en_i1 (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/ram_wr_en)
+     FDPE:CE                   0.302          U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_1
+    ----------------------------------------
+    Total                      3.286ns (1.077ns logic, 2.209ns route)
+                                       (32.8% logic, 67.2% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clock2'
+  Clock period: 6.498ns (frequency: 153.894MHz)
+  Total number of paths / destination ports: 538 / 185
+-------------------------------------------------------------------------
+Delay:               3.249ns (Levels of Logic = 2)
+  Source:            transfer/read_en (FF)
+  Destination:       transfer/X0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_9 (FF)
+  Source Clock:      clock2 rising
+  Destination Clock: clock2 falling
+
+  Data Path: transfer/read_en to transfer/X0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              4   0.525   0.912  transfer/read_en (transfer/read_en)
+     begin scope: 'transfer/X0:rd_en'
+     LUT2:I0->O           19   0.250   1.260  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/ram_rd_en_i1 (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/ram_rd_en)
+     FDCE:CE                   0.302          U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_1
+    ----------------------------------------
+    Total                      3.249ns (1.077ns logic, 2.172ns route)
+                                       (33.1% logic, 66.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'hi_in<0>'
+  Total number of paths / destination ports: 530 / 119
+-------------------------------------------------------------------------
+Offset:              6.352ns (Levels of Logic = 5)
+  Source:            hi_in<7> (PAD)
+  Destination:       okHI/hicore/ti_dataout_0 (FF)
+  Destination Clock: hi_in<0> rising
+
+  Data Path: hi_in<7> to okHI/hicore/ti_dataout_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            20   1.328   1.562  hi_in_7_IBUF (hi_in_7_IBUF)
+     begin scope: 'okHI/hicore:hi_in<7>'
+     LUT4:I0->O           18   0.254   1.463  hi_addr[3]_hi_addr[3]_OR_57_o1 (hi_addr[3]_hi_addr[3]_OR_57_o)
+     LUT5:I2->O           16   0.235   1.182  state[31]_ti_dataout[15]_select_91_OUT<0>12 (N2)
+     LUT6:I5->O            1   0.254   0.000  state[31]_ti_dataout[15]_select_91_OUT<0>2 (state[31]_ti_dataout[15]_select_91_OUT<0>)
+     FDE:D                     0.074          ti_dataout_0
+    ----------------------------------------
+    Total                      6.352ns (2.145ns logic, 4.207ns route)
+                                       (33.8% logic, 66.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'hi_in<0>'
+  Total number of paths / destination ports: 33 / 17
+-------------------------------------------------------------------------
+Offset:              4.118ns (Levels of Logic = 2)
+  Source:            okHI/hicore/hi_busy (FF)
+  Destination:       hi_out<0> (PAD)
+  Source Clock:      hi_in<0> rising
+
+  Data Path: okHI/hicore/hi_busy to hi_out<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.525   0.681  hi_busy (hi_out<0>)
+     end scope: 'okHI/hicore:hi_out<0>'
+     OBUF:I->O                 2.912          okHI/obuf0 (hi_out<0>)
+    ----------------------------------------
+    Total                      4.118ns (3.437ns logic, 0.681ns route)
+                                       (83.5% logic, 16.5% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 16 / 16
+-------------------------------------------------------------------------
+Delay:               1.328ns (Levels of Logic = 1)
+  Source:            hi_inout<15> (PAD)
+  Destination:       okHI/delays[15].iodelay_inst:IDATAIN (PAD)
+
+  Data Path: hi_inout<15> to okHI/delays[15].iodelay_inst:IDATAIN
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IOBUF:IO->O           0   1.328   0.000  okHI/delays[15].iobf0 (okHI/iobf0_hi_datain<15>)
+    IODELAY2:IDATAIN           0.000          okHI/delays[15].iodelay_inst
+    ----------------------------------------
+    Total                      1.328ns (1.328ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clock
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |    3.515|    3.286|    3.950|         |
+clock2         |         |    1.280|         |         |
+hi_in<0>       |    2.587|         |    2.810|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clock2
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |         |    3.048|    1.280|         |
+clock2         |    4.617|    1.788|    3.452|         |
+hi_in<0>       |    6.164|         |    2.587|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock hi_in<0>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock2         |    4.282|    4.150|         |         |
+hi_in<0>       |    6.949|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 8.52 secs
+ 
+--> 
+
+Total memory usage is 350056 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   17 (   0 filtered)
+Number of infos    :   10 (   0 filtered)
+

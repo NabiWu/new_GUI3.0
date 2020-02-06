@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\Nanolab3\Desktop\Mayank\verilog\wirein_test1\wirein_test1.ncd
+OUTFILE=C:\Users\Nanolab3\Desktop\Mayank\verilog\wirein_test1\wirein_test1.bit
+FAMILY=Spartan6
+PART=xc6slx16-2ftg256
+WORKINGDIR=C:\Users\Nanolab3\Desktop\Mayank\verilog\wirein_test1
+LICENSE=WebPack
+USER_INFO=211373772_0_0_117

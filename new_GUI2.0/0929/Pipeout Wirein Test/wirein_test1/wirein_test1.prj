@@ -1,0 +1,5 @@
+verilog work "ipcore_dir/Transfer_FIFO.v"
+verilog work "ramp.v"
+verilog work "okLibrary.v"
+verilog work "CIC_data_transferFIFO.v"
+verilog work "wirein_test1.v"

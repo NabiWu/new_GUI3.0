@@ -1,0 +1,905 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Reading design: wirein_test1.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "wirein_test1.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "wirein_test1"
+Output Format                      : NGC
+Target Device                      : xc6slx45-2-fgg484
+
+---- Source Options
+Top Module Name                    : wirein_test1
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "F:\Wirein_tst\ipcore_dir\Asyn_FIFO.v" into library work
+Parsing module <Asyn_FIFO>.
+Analyzing Verilog file "F:\Wirein_tst\ramp.v" into library work
+Parsing module <ramp>.
+WARNING:HDLCompiler:751 - "F:\Wirein_tst\ramp.v" Line 10: Redeclaration of ansi port data_out is not allowed
+Analyzing Verilog file "F:\Wirein_tst\okLibrary.v" into library work
+Parsing module <okHost>.
+Parsing module <okCoreHarness>.
+Parsing module <okWireIn>.
+Parsing module <okWireOut>.
+Parsing module <okTriggerIn>.
+Parsing module <okTriggerOut>.
+Parsing module <okPipeIn>.
+Parsing module <okPipeOut>.
+Parsing module <okBTPipeIn>.
+Parsing module <okBTPipeOut>.
+Parsing module <okRegisterBridge>.
+Parsing module <okWireOR>.
+Analyzing Verilog file "F:\Wirein_tst\cont_dataTransfer_FIFO.v" into library work
+Parsing module <cont_dataTransfer_FIFO>.
+Analyzing Verilog file "F:\Wirein_tst\clk_div_v3.v" into library work
+Parsing module <clk_div_v3>.
+Analyzing Verilog file "F:\Wirein_tst\wirein_test1.v" into library work
+Parsing module <wirein_test1>.
+WARNING:HDLCompiler:751 - "F:\Wirein_tst\wirein_test1.v" Line 17: Redeclaration of ansi port okUH is not allowed
+WARNING:HDLCompiler:751 - "F:\Wirein_tst\wirein_test1.v" Line 18: Redeclaration of ansi port okHU is not allowed
+WARNING:HDLCompiler:751 - "F:\Wirein_tst\wirein_test1.v" Line 19: Redeclaration of ansi port okUHU is not allowed
+WARNING:HDLCompiler:751 - "F:\Wirein_tst\wirein_test1.v" Line 20: Redeclaration of ansi port okAA is not allowed
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <wirein_test1>.
+
+Elaborating module <IBUFGDS>.
+
+Elaborating module <clk_div_v3>.
+WARNING:HDLCompiler:413 - "F:\Wirein_tst\clk_div_v3.v" Line 35: Result of 18-bit expression is truncated to fit in 17-bit target.
+
+Elaborating module <ramp>.
+WARNING:HDLCompiler:413 - "F:\Wirein_tst\ramp.v" Line 30: Result of 8-bit expression is truncated to fit in 7-bit target.
+WARNING:HDLCompiler:413 - "F:\Wirein_tst\ramp.v" Line 38: Result of 32-bit expression is truncated to fit in 7-bit target.
+
+Elaborating module <cont_dataTransfer_FIFO>.
+
+Elaborating module <Asyn_FIFO>.
+WARNING:HDLCompiler:1499 - "F:\Wirein_tst\ipcore_dir\Asyn_FIFO.v" Line 39: Empty module <Asyn_FIFO> remains a black box.
+WARNING:HDLCompiler:1127 - "F:\Wirein_tst\cont_dataTransfer_FIFO.v" Line 107: Assignment to FULL_X0 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "F:\Wirein_tst\cont_dataTransfer_FIFO.v" Line 108: Assignment to EMPTY_X0 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "F:\Wirein_tst\cont_dataTransfer_FIFO.v" Line 120: Assignment to FULL_X1 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "F:\Wirein_tst\cont_dataTransfer_FIFO.v" Line 121: Assignment to EMPTY_X1 ignored, since the identifier is never used
+WARNING:HDLCompiler:1016 - "F:\Wirein_tst\okLibrary.v" Line 39: Port CLK180 is not connected to this instance
+
+Elaborating module <okHost>.
+
+Elaborating module <IBUFG>.
+
+Elaborating module <DCM_SP(CLKIN_PERIOD=9.92,CLKOUT_PHASE_SHIFT="FIXED",PHASE_SHIFT="-24",CLK_FEEDBACK="1X",DESKEW_ADJUST="SOURCE_SYNCHRONOUS",STARTUP_WAIT="FALSE")>.
+
+Elaborating module <BUFG>.
+
+Elaborating module <IOBUF>.
+
+Elaborating module <FDRE>.
+
+Elaborating module <okCoreHarness>.
+WARNING:HDLCompiler:1127 - "F:\Wirein_tst\wirein_test1.v" Line 95: Assignment to okClk ignored, since the identifier is never used
+
+Elaborating module <okWireOR(N=1)>.
+
+Elaborating module <okWireIn>.
+
+Elaborating module <okBTPipeOut>.
+WARNING:HDLCompiler:1127 - "F:\Wirein_tst\wirein_test1.v" Line 106: Assignment to epA0_blockSTROBE ignored, since the identifier is never used
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <wirein_test1>.
+    Related source file is "F:\Wirein_tst\wirein_test1.v".
+INFO:Xst:3210 - "F:\Wirein_tst\wirein_test1.v" line 90: Output port <okClk> of the instance <okHI> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "F:\Wirein_tst\wirein_test1.v" line 106: Output port <ep_blockstrobe> of the instance <pipeOutA0> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <wirein_test1> synthesized.
+
+Synthesizing Unit <clk_div_v3>.
+    Related source file is "F:\Wirein_tst\clk_div_v3.v".
+        WIDTH = 17
+        N = 5000
+    Found 17-bit register for signal <r_reg>.
+    Found 1-bit register for signal <clk_track>.
+    Found 17-bit adder for signal <r_nxt> created at line 35.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  18 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <clk_div_v3> synthesized.
+
+Synthesizing Unit <ramp>.
+    Related source file is "F:\Wirein_tst\ramp.v".
+    Found 1-bit register for signal <s1>.
+    Found 7-bit register for signal <count>.
+    Found 7-bit adder for signal <_n0035> created at line 30.
+    Found 7-bit subtractor for signal <_n0038> created at line 39.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred   8 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <ramp> synthesized.
+
+Synthesizing Unit <cont_dataTransfer_FIFO>.
+    Related source file is "F:\Wirein_tst\cont_dataTransfer_FIFO.v".
+        cycle = 120
+INFO:Xst:3210 - "F:\Wirein_tst\cont_dataTransfer_FIFO.v" line 98: Output port <full> of the instance <X0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "F:\Wirein_tst\cont_dataTransfer_FIFO.v" line 98: Output port <empty> of the instance <X0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "F:\Wirein_tst\cont_dataTransfer_FIFO.v" line 111: Output port <full> of the instance <X1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "F:\Wirein_tst\cont_dataTransfer_FIFO.v" line 111: Output port <empty> of the instance <X1> is unconnected or connected to loadless signal.
+    Found 1-bit register for signal <RST_X0>.
+    Found 1-bit register for signal <RST_X1>.
+    Found 1-bit register for signal <WE_X0>.
+    Found 1-bit register for signal <WE_X1>.
+    Found 1-bit register for signal <INT_STOP>.
+    Found 1-bit register for signal <SWAP_CYCLE>.
+    Found 1-bit register for signal <EN_WE_COUNT0>.
+    Found 1-bit register for signal <EN_WE_COUNT1>.
+    Found 1-bit register for signal <EP_READY_X0>.
+    Found 1-bit register for signal <EP_READY_X1>.
+    Found 1-bit register for signal <EP_READ_POSSYNC>.
+    Found 1-bit register for signal <RE_X0_TMP0>.
+    Found 1-bit register for signal <RE_X1_TMP0>.
+    Found 1-bit register for signal <RE_X0_TMP2>.
+    Found 1-bit register for signal <RE_X1_TMP2>.
+    Found 1-bit register for signal <INCREMENT_POST_WE_X0>.
+    Found 1-bit register for signal <INCREMENT_POST_WE_X1>.
+    Found 1-bit register for signal <INCREMENT_INT>.
+    Found 3-bit register for signal <COUNT_INT>.
+    Found 3-bit register for signal <COUNT_POST_WE_X0>.
+    Found 3-bit register for signal <COUNT_POST_WE_X1>.
+    Found 13-bit register for signal <COUNT_FIFO>.
+    Found 10-bit register for signal <COUNT_CYCLE>.
+    Found 10-bit adder for signal <COUNT_CYCLE[9]_GND_6_o_add_2_OUT> created at line 135.
+    Found 3-bit adder for signal <_n0213> created at line 159.
+    Found 13-bit adder for signal <COUNT_FIFO[12]_GND_6_o_add_9_OUT> created at line 173.
+    Found 3-bit adder for signal <_n0210> created at line 279.
+    Found 3-bit adder for signal <_n0207> created at line 324.
+    Found 10-bit comparator greater for signal <n0011> created at line 170
+    Summary:
+	inferred   5 Adder/Subtractor(s).
+	inferred  50 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   8 Multiplexer(s).
+Unit <cont_dataTransfer_FIFO> synthesized.
+
+Synthesizing Unit <okHost>.
+    Related source file is "F:\Wirein_tst\okLibrary.v".
+    Set property "IOB = TRUE" for instance <iob_regs[0].regin0>.
+    Set property "IOB = TRUE" for instance <iob_regs[0].regout0>.
+    Set property "IOB = TRUE" for instance <iob_regs[0].regvalid>.
+    Set property "IOB = TRUE" for instance <iob_regs[1].regin0>.
+    Set property "IOB = TRUE" for instance <iob_regs[1].regout0>.
+    Set property "IOB = TRUE" for instance <iob_regs[1].regvalid>.
+    Set property "IOB = TRUE" for instance <iob_regs[2].regin0>.
+    Set property "IOB = TRUE" for instance <iob_regs[2].regout0>.
+    Set property "IOB = TRUE" for instance <iob_regs[2].regvalid>.
+    Set property "IOB = TRUE" for instance <iob_regs[3].regin0>.
+    Set property "IOB = TRUE" for instance <iob_regs[3].regout0>.
+    Set property "IOB = TRUE" for instance <iob_regs[3].regvalid>.
+    Set property "IOB = TRUE" for instance <iob_regs[4].regin0>.
+    Set property "IOB = TRUE" for instance <iob_regs[4].regout0>.
+    Set property "IOB = TRUE" for instance <iob_regs[4].regvalid>.
+    Set property "IOB = TRUE" for instance <iob_regs[5].regin0>.
+    Set property "IOB = TRUE" for instance <iob_regs[5].regout0>.
+    Set property "IOB = TRUE" for instance <iob_regs[5].regvalid>.
+    Set property "IOB = TRUE" for instance <iob_regs[6].regin0>.
+    Set property "IOB = TRUE" for instance <iob_regs[6].regout0>.
+    Set property "IOB = TRUE" for instance <iob_regs[6].regvalid>.
+    Set property "IOB = TRUE" for instance <iob_regs[7].regin0>.
+    Set property "IOB = TRUE" for instance <iob_regs[7].regout0>.
+    Set property "IOB = TRUE" for instance <iob_regs[7].regvalid>.
+    Set property "IOB = TRUE" for instance <iob_regs[8].regin0>.
+    Set property "IOB = TRUE" for instance <iob_regs[8].regout0>.
+    Set property "IOB = TRUE" for instance <iob_regs[8].regvalid>.
+    Set property "IOB = TRUE" for instance <iob_regs[9].regin0>.
+    Set property "IOB = TRUE" for instance <iob_regs[9].regout0>.
+    Set property "IOB = TRUE" for instance <iob_regs[9].regvalid>.
+    Set property "IOB = TRUE" for instance <iob_regs[10].regin0>.
+    Set property "IOB = TRUE" for instance <iob_regs[10].regout0>.
+    Set property "IOB = TRUE" for instance <iob_regs[10].regvalid>.
+    Set property "IOB = TRUE" for instance <iob_regs[11].regin0>.
+    Set property "IOB = TRUE" for instance <iob_regs[11].regout0>.
+    Set property "IOB = TRUE" for instance <iob_regs[11].regvalid>.
+    Set property "IOB = TRUE" for instance <iob_regs[12].regin0>.
+    Set property "IOB = TRUE" for instance <iob_regs[12].regout0>.
+    Set property "IOB = TRUE" for instance <iob_regs[12].regvalid>.
+    Set property "IOB = TRUE" for instance <iob_regs[13].regin0>.
+    Set property "IOB = TRUE" for instance <iob_regs[13].regout0>.
+    Set property "IOB = TRUE" for instance <iob_regs[13].regvalid>.
+    Set property "IOB = TRUE" for instance <iob_regs[14].regin0>.
+    Set property "IOB = TRUE" for instance <iob_regs[14].regout0>.
+    Set property "IOB = TRUE" for instance <iob_regs[14].regvalid>.
+    Set property "IOB = TRUE" for instance <iob_regs[15].regin0>.
+    Set property "IOB = TRUE" for instance <iob_regs[15].regout0>.
+    Set property "IOB = TRUE" for instance <iob_regs[15].regvalid>.
+    Set property "IOB = TRUE" for instance <iob_regs[16].regin0>.
+    Set property "IOB = TRUE" for instance <iob_regs[16].regout0>.
+    Set property "IOB = TRUE" for instance <iob_regs[16].regvalid>.
+    Set property "IOB = TRUE" for instance <iob_regs[17].regin0>.
+    Set property "IOB = TRUE" for instance <iob_regs[17].regout0>.
+    Set property "IOB = TRUE" for instance <iob_regs[17].regvalid>.
+    Set property "IOB = TRUE" for instance <iob_regs[18].regin0>.
+    Set property "IOB = TRUE" for instance <iob_regs[18].regout0>.
+    Set property "IOB = TRUE" for instance <iob_regs[18].regvalid>.
+    Set property "IOB = TRUE" for instance <iob_regs[19].regin0>.
+    Set property "IOB = TRUE" for instance <iob_regs[19].regout0>.
+    Set property "IOB = TRUE" for instance <iob_regs[19].regvalid>.
+    Set property "IOB = TRUE" for instance <iob_regs[20].regin0>.
+    Set property "IOB = TRUE" for instance <iob_regs[20].regout0>.
+    Set property "IOB = TRUE" for instance <iob_regs[20].regvalid>.
+    Set property "IOB = TRUE" for instance <iob_regs[21].regin0>.
+    Set property "IOB = TRUE" for instance <iob_regs[21].regout0>.
+    Set property "IOB = TRUE" for instance <iob_regs[21].regvalid>.
+    Set property "IOB = TRUE" for instance <iob_regs[22].regin0>.
+    Set property "IOB = TRUE" for instance <iob_regs[22].regout0>.
+    Set property "IOB = TRUE" for instance <iob_regs[22].regvalid>.
+    Set property "IOB = TRUE" for instance <iob_regs[23].regin0>.
+    Set property "IOB = TRUE" for instance <iob_regs[23].regout0>.
+    Set property "IOB = TRUE" for instance <iob_regs[23].regvalid>.
+    Set property "IOB = TRUE" for instance <iob_regs[24].regin0>.
+    Set property "IOB = TRUE" for instance <iob_regs[24].regout0>.
+    Set property "IOB = TRUE" for instance <iob_regs[24].regvalid>.
+    Set property "IOB = TRUE" for instance <iob_regs[25].regin0>.
+    Set property "IOB = TRUE" for instance <iob_regs[25].regout0>.
+    Set property "IOB = TRUE" for instance <iob_regs[25].regvalid>.
+    Set property "IOB = TRUE" for instance <iob_regs[26].regin0>.
+    Set property "IOB = TRUE" for instance <iob_regs[26].regout0>.
+    Set property "IOB = TRUE" for instance <iob_regs[26].regvalid>.
+    Set property "IOB = TRUE" for instance <iob_regs[27].regin0>.
+    Set property "IOB = TRUE" for instance <iob_regs[27].regout0>.
+    Set property "IOB = TRUE" for instance <iob_regs[27].regvalid>.
+    Set property "IOB = TRUE" for instance <iob_regs[28].regin0>.
+    Set property "IOB = TRUE" for instance <iob_regs[28].regout0>.
+    Set property "IOB = TRUE" for instance <iob_regs[28].regvalid>.
+    Set property "IOB = TRUE" for instance <iob_regs[29].regin0>.
+    Set property "IOB = TRUE" for instance <iob_regs[29].regout0>.
+    Set property "IOB = TRUE" for instance <iob_regs[29].regvalid>.
+    Set property "IOB = TRUE" for instance <iob_regs[30].regin0>.
+    Set property "IOB = TRUE" for instance <iob_regs[30].regout0>.
+    Set property "IOB = TRUE" for instance <iob_regs[30].regvalid>.
+    Set property "IOB = TRUE" for instance <iob_regs[31].regin0>.
+    Set property "IOB = TRUE" for instance <iob_regs[31].regout0>.
+    Set property "IOB = TRUE" for instance <iob_regs[31].regvalid>.
+    Set property "IOB = TRUE" for instance <regctrlout0>.
+    Set property "IOB = TRUE" for instance <regctrlout1>.
+    Set property "IOB = TRUE" for instance <regctrlout2>.
+    Set property "IOB = TRUE" for instance <regctrlin0a>.
+    Set property "IOB = TRUE" for instance <regctrlin1a>.
+    Set property "IOB = TRUE" for instance <regctrlin2a>.
+    Set property "IOB = TRUE" for instance <regctrlin3a>.
+    Summary:
+	no macro.
+Unit <okHost> synthesized.
+
+Synthesizing Unit <okWireOR>.
+    Related source file is "F:\Wirein_tst\okLibrary.v".
+        N = 1
+    Summary:
+	no macro.
+Unit <okWireOR> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 8
+ 10-bit adder                                          : 1
+ 13-bit adder                                          : 1
+ 17-bit adder                                          : 1
+ 3-bit adder                                           : 3
+ 7-bit adder                                           : 1
+ 7-bit subtractor                                      : 1
+# Registers                                            : 27
+ 1-bit register                                        : 20
+ 10-bit register                                       : 1
+ 13-bit register                                       : 1
+ 17-bit register                                       : 1
+ 3-bit register                                        : 3
+ 7-bit register                                        : 1
+# Comparators                                          : 1
+ 10-bit comparator greater                             : 1
+# Multiplexers                                         : 10
+ 1-bit 2-to-1 multiplexer                              : 3
+ 13-bit 2-to-1 multiplexer                             : 1
+ 16-bit 2-to-1 multiplexer                             : 1
+ 17-bit 2-to-1 multiplexer                             : 1
+ 3-bit 2-to-1 multiplexer                              : 3
+ 7-bit 2-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <okWireIn.ngc>.
+Reading core <okBTPipeOut.ngc>.
+Reading core <okCoreHarness.ngc>.
+Reading core <TFIFO64x8a_64x8b.ngc>.
+Reading core <ipcore_dir/Asyn_FIFO.ngc>.
+Loading core <okWireIn> for timing and area information for instance <ep00>.
+Loading core <okWireIn> for timing and area information for instance <ep01>.
+Loading core <okWireIn> for timing and area information for instance <ep02>.
+Loading core <okBTPipeOut> for timing and area information for instance <pipeOutA0>.
+Loading core <TFIFO64x8a_64x8b> for timing and area information for instance <core0/a0/cb0>.
+Loading core <okCoreHarness> for timing and area information for instance <core0>.
+Loading core <Asyn_FIFO> for timing and area information for instance <X0>.
+Loading core <Asyn_FIFO> for timing and area information for instance <X1>.
+
+Synthesizing (advanced) Unit <cont_dataTransfer_FIFO>.
+The following registers are absorbed into accumulator <COUNT_CYCLE>: 1 register on signal <COUNT_CYCLE>.
+Unit <cont_dataTransfer_FIFO> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 7
+ 13-bit adder                                          : 1
+ 17-bit adder                                          : 1
+ 3-bit adder                                           : 3
+ 7-bit adder                                           : 1
+ 7-bit subtractor                                      : 1
+# Accumulators                                         : 1
+ 10-bit up accumulator                                 : 1
+# Registers                                            : 169
+ Flip-Flops                                            : 169
+# Comparators                                          : 1
+ 10-bit comparator greater                             : 1
+# Multiplexers                                         : 10
+ 1-bit 2-to-1 multiplexer                              : 3
+ 13-bit 2-to-1 multiplexer                             : 1
+ 16-bit 2-to-1 multiplexer                             : 1
+ 17-bit 2-to-1 multiplexer                             : 1
+ 3-bit 2-to-1 multiplexer                              : 3
+ 7-bit 2-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <COUNT_CYCLE_0> (without init value) has a constant value of 0 in block <cont_dataTransfer_FIFO>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <wirein_test1> ...
+
+Optimizing unit <okHost> ...
+
+Optimizing unit <clk_div_v3> ...
+
+Optimizing unit <cont_dataTransfer_FIFO> ...
+
+Optimizing unit <ramp> ...
+WARNING:Xst:1710 - FF/Latch <U0/r_reg_16> (without init value) has a constant value of 0 in block <wirein_test1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <U0/r_reg_15> (without init value) has a constant value of 0 in block <wirein_test1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <U0/r_reg_14> (without init value) has a constant value of 0 in block <wirein_test1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <U0/r_reg_13> (without init value) has a constant value of 0 in block <wirein_test1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <X2/COUNT_FIFO_12> (without init value) has a constant value of 0 in block <wirein_test1>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:3203 - The FF/Latch <X2/INCREMENT_INT> in Unit <wirein_test1> is the opposite to the following FF/Latch, which will be removed : <X2/INT_STOP> 
+INFO:Xst:3203 - The FF/Latch <X2/INCREMENT_POST_WE_X0> in Unit <wirein_test1> is the opposite to the following FF/Latch, which will be removed : <X2/EP_READY_X0> 
+INFO:Xst:3203 - The FF/Latch <X2/INCREMENT_POST_WE_X1> in Unit <wirein_test1> is the opposite to the following FF/Latch, which will be removed : <X2/EP_READY_X1> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block wirein_test1, actual ratio is 4.
+INFO:Xst:2260 - The FF/Latch <core0/a0/pc0/sync_interrupt_flop> in Unit <okHI/core0> is equivalent to the following FF/Latch : <core0/a0/pc0/sync_sleep_flop> 
+INFO:Xst:2260 - The FF/Latch <U0/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <BU2> is equivalent to the following FF/Latch : <U0/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/grf.rf/gl0.wr/gwss.wsts/ram_full_i> in Unit <BU2> is equivalent to the following FF/Latch : <U0/grf.rf/gl0.wr/gwss.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/grf.rf/gl0.rd/grss.rsts/ram_empty_i> in Unit <BU2> is equivalent to the following FF/Latch : <U0/grf.rf/gl0.rd/grss.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <X2/X1> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i> in Unit <X2/X1> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <X2/X1> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <X2/X1> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <X2/X0> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i> in Unit <X2/X0> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <X2/X0> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <X2/X0> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <core0/a0/pc0/sync_interrupt_flop> in Unit <okHI/core0> is equivalent to the following FF/Latch : <core0/a0/pc0/sync_sleep_flop> 
+INFO:Xst:2260 - The FF/Latch <U0/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <BU2> is equivalent to the following FF/Latch : <U0/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/grf.rf/gl0.wr/gwss.wsts/ram_full_i> in Unit <BU2> is equivalent to the following FF/Latch : <U0/grf.rf/gl0.wr/gwss.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/grf.rf/gl0.rd/grss.rsts/ram_empty_i> in Unit <BU2> is equivalent to the following FF/Latch : <U0/grf.rf/gl0.rd/grss.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <BU2> is equivalent to the following FF/Latch : <U0/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/grf.rf/gl0.wr/gwss.wsts/ram_full_i> in Unit <BU2> is equivalent to the following FF/Latch : <U0/grf.rf/gl0.wr/gwss.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/grf.rf/gl0.rd/grss.rsts/ram_empty_i> in Unit <BU2> is equivalent to the following FF/Latch : <U0/grf.rf/gl0.rd/grss.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <BU2> is equivalent to the following FF/Latch : <U0/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/grf.rf/gl0.wr/gwss.wsts/ram_full_i> in Unit <BU2> is equivalent to the following FF/Latch : <U0/grf.rf/gl0.wr/gwss.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/grf.rf/gl0.rd/grss.rsts/ram_empty_i> in Unit <BU2> is equivalent to the following FF/Latch : <U0/grf.rf/gl0.rd/grss.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <X2/X1> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i> in Unit <X2/X1> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <X2/X1> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <X2/X1> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <X2/X0> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i> in Unit <X2/X0> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <X2/X0> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <X2/X0> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 170
+ Flip-Flops                                            : 170
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : wirein_test1.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 1934
+#      GND                         : 8
+#      INV                         : 54
+#      LUT1                        : 172
+#      LUT2                        : 190
+#      LUT3                        : 67
+#      LUT4                        : 219
+#      LUT5                        : 155
+#      LUT6                        : 504
+#      LUT6_2                      : 50
+#      MUXCY                       : 279
+#      MUXF7                       : 2
+#      VCC                         : 4
+#      XORCY                       : 230
+# FlipFlops/Latches                : 1476
+#      FD                          : 140
+#      FDC                         : 317
+#      FDC_1                       : 7
+#      FDCE                        : 267
+#      FDCE_1                      : 28
+#      FDE                         : 278
+#      FDP                         : 61
+#      FDP_1                       : 3
+#      FDPE                        : 12
+#      FDPE_1                      : 1
+#      FDR                         : 33
+#      FDRE                        : 325
+#      FDS                         : 2
+#      FDSE                        : 2
+# RAMS                             : 26
+#      RAM128X1S                   : 8
+#      RAM32M                      : 4
+#      RAM64M                      : 2
+#      RAM64X1D                    : 2
+#      RAMB16BWER                  : 10
+# Shift Registers                  : 1
+#      SRLC16E                     : 1
+# Clock Buffers                    : 3
+#      BUFG                        : 3
+# IO Buffers                       : 42
+#      IBUF                        : 4
+#      IBUFG                       : 1
+#      IBUFGDS                     : 1
+#      IOBUF                       : 33
+#      OBUF                        : 3
+# DCMs                             : 1
+#      DCM_SP                      : 1
+# Others                           : 1
+#      DNA_PORT                    : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx45fgg484-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            1373  out of  54576     2%  
+ Number of Slice LUTs:                 1456  out of  27288     5%  
+    Number used as Logic:              1411  out of  27288     5%  
+    Number used as Memory:               45  out of   6408     0%  
+       Number used as RAM:               44
+       Number used as SRL:                1
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   2100
+   Number with an unused Flip Flop:     727  out of   2100    34%  
+   Number with an unused LUT:           644  out of   2100    30%  
+   Number of fully used LUT-FF pairs:   729  out of   2100    34%  
+   Number of unique control sets:        84
+
+IO Utilization: 
+ Number of IOs:                          44
+ Number of bonded IOBs:                  43  out of    316    13%  
+    IOB Flip Flops/Latches:             103
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:               10  out of    116     8%  
+    Number using Block RAM only:         10
+ Number of BUFG/BUFGCTRLs:                3  out of     16    18%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)                                      | Load  |
+-----------------------------------+------------------------------------------------------------+-------+
+okUH<0>                            | DCM_SP:CLK0                                                | 1084  |
+sys_clkp                           | IBUFGDS+BUFG                                               | 185   |
+X2/WE_X0                           | NONE(X2/COUNT_CYCLE_9)                                     | 10    |
+U0/clk_track                       | BUFG                                                       | 231   |
+X2/WE_X1                           | NONE(X2/EN_WE_COUNT1)                                      | 1     |
+okHI/core0/okHE<41>                | NONE(okHI/core0/core0/a0/pm0/ram_1k_generate.s6.kcpsm6_rom)| 1     |
+-----------------------------------+------------------------------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 8.732ns (Maximum Frequency: 114.521MHz)
+   Minimum input arrival time before clock: 2.083ns
+   Maximum output required time after clock: 4.162ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'okUH<0>'
+  Clock period: 7.818ns (frequency: 127.910MHz)
+  Total number of paths / destination ports: 26322 / 1833
+-------------------------------------------------------------------------
+Delay:               7.818ns (Levels of Logic = 3)
+  Source:            okHI/core0/core0/a0/pm0/ram_1k_generate.s6.kcpsm6_rom (RAM)
+  Destination:       okHI/core0/core0/a0/atmel_status_fuses_19 (FF)
+  Source Clock:      okUH<0> rising +-24
+  Destination Clock: okUH<0> rising +-24
+
+  Data Path: okHI/core0/core0/a0/pm0/ram_1k_generate.s6.kcpsm6_rom to okHI/core0/core0/a0/atmel_status_fuses_19
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB16BWER:CLKA->DOA7   16   2.100   1.181  core0/a0/pm0/ram_1k_generate.s6.kcpsm6_rom (core0/a0/pico_instr<7>)
+     LUT6_2:I3->O5        10   0.214   1.284  core0/a0/pc0/data_path_loop[6].output_data.sy_kk_mux_lut (core0/a0/pico_port_id<6>)
+     LUT5:I1->O            8   0.254   0.944  core0/a0/_n0185_inv11 (core0/a0/_n0185_inv1)
+     LUT5:I4->O           20   0.254   1.285  core0/a0/_n0206_inv1 (core0/a0/_n0206_inv)
+     FDE:CE                    0.302          core0/a0/atmel_status_fuses_0
+    ----------------------------------------
+    Total                      7.818ns (3.124ns logic, 4.694ns route)
+                                       (40.0% logic, 60.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'sys_clkp'
+  Clock period: 8.732ns (frequency: 114.521MHz)
+  Total number of paths / destination ports: 1813 / 456
+-------------------------------------------------------------------------
+Delay:               4.366ns (Levels of Logic = 3)
+  Source:            X2/EP_READ_POSSYNC (FF)
+  Destination:       X2/X1/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_11 (FF)
+  Source Clock:      sys_clkp rising
+  Destination Clock: sys_clkp falling
+
+  Data Path: X2/EP_READ_POSSYNC to X2/X1/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_11
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              4   0.525   0.804  X2/EP_READ_POSSYNC (X2/EP_READ_POSSYNC)
+     LUT4:I3->O            3   0.254   0.874  X2/RE_X11 (X2/RE_X1)
+     begin scope: 'X2/X1:rd_en'
+     LUT2:I0->O           23   0.250   1.357  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/ram_rd_en_i1 (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/ram_rd_en)
+     FDCE:CE                   0.302          U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_1
+    ----------------------------------------
+    Total                      4.366ns (1.331ns logic, 3.035ns route)
+                                       (30.5% logic, 69.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'X2/WE_X0'
+  Clock period: 3.456ns (frequency: 289.352MHz)
+  Total number of paths / destination ports: 45 / 9
+-------------------------------------------------------------------------
+Delay:               3.456ns (Levels of Logic = 2)
+  Source:            X2/COUNT_CYCLE_1 (FF)
+  Destination:       X2/COUNT_CYCLE_9 (FF)
+  Source Clock:      X2/WE_X0 rising
+  Destination Clock: X2/WE_X0 rising
+
+  Data Path: X2/COUNT_CYCLE_1 to X2/COUNT_CYCLE_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              8   0.525   1.172  X2/COUNT_CYCLE_1 (X2/COUNT_CYCLE_1)
+     LUT4:I1->O            3   0.235   1.196  X2/Maccum_COUNT_CYCLE_xor<5>111 (X2/Maccum_COUNT_CYCLE_xor<5>11)
+     LUT6:I1->O            1   0.254   0.000  X2/Maccum_COUNT_CYCLE_xor<9>11 (X2/Result<9>)
+     FDC:D                     0.074          X2/COUNT_CYCLE_9
+    ----------------------------------------
+    Total                      3.456ns (1.088ns logic, 2.368ns route)
+                                       (31.5% logic, 68.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'U0/clk_track'
+  Clock period: 8.176ns (frequency: 122.303MHz)
+  Total number of paths / destination ports: 2128 / 615
+-------------------------------------------------------------------------
+Delay:               4.088ns (Levels of Logic = 2)
+  Source:            X2/WE_X0 (FF)
+  Destination:       X2/X0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_d2_11 (FF)
+  Source Clock:      U0/clk_track falling
+  Destination Clock: U0/clk_track rising
+
+  Data Path: X2/WE_X0 to X2/X0/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_d2_11
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE_1:C->Q          35   0.525   1.678  X2/WE_X0 (X2/WE_X0)
+     begin scope: 'X2/X0:wr_en'
+     LUT2:I0->O           22   0.250   1.333  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/ram_wr_en_i1_1 (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/ram_wr_en_i1)
+     FDCE:CE                   0.302          U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_d1_1
+    ----------------------------------------
+    Total                      4.088ns (1.077ns logic, 3.011ns route)
+                                       (26.3% logic, 73.7% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'okHI/core0/okHE<41>'
+  Clock period: 3.081ns (frequency: 324.570MHz)
+  Total number of paths / destination ports: 18 / 18
+-------------------------------------------------------------------------
+Delay:               3.081ns (Levels of Logic = 0)
+  Source:            okHI/core0/core0/a0/pm0/ram_1k_generate.s6.kcpsm6_rom (RAM)
+  Destination:       okHI/core0/core0/a0/pm0/ram_1k_generate.s6.kcpsm6_rom (RAM)
+  Source Clock:      okHI/core0/okHE<41> rising
+  Destination Clock: okHI/core0/okHE<41> rising
+
+  Data Path: okHI/core0/core0/a0/pm0/ram_1k_generate.s6.kcpsm6_rom to okHI/core0/core0/a0/pm0/ram_1k_generate.s6.kcpsm6_rom
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB16BWER:CLKB->DOB15    1   2.100   0.681  core0/a0/pm0/ram_1k_generate.s6.kcpsm6_rom (core0/a0/pm0/n0016<15>)
+     RAMB16BWER:DIB15          0.300          core0/a0/pm0/ram_1k_generate.s6.kcpsm6_rom
+    ----------------------------------------
+    Total                      3.081ns (2.400ns logic, 0.681ns route)
+                                       (77.9% logic, 22.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'okUH<0>'
+  Total number of paths / destination ports: 38 / 38
+-------------------------------------------------------------------------
+Offset:              2.083ns (Levels of Logic = 1)
+  Source:            okUH<4> (PAD)
+  Destination:       okHI/regctrlin3a (FF)
+  Destination Clock: okUH<0> rising +-24
+
+  Data Path: okUH<4> to okHI/regctrlin3a
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.328   0.681  okUH_4_IBUF (okUH_4_IBUF)
+     FDRE:D                    0.074          okHI/regctrlin3a
+    ----------------------------------------
+    Total                      2.083ns (1.402ns logic, 0.681ns route)
+                                       (67.3% logic, 32.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'okUH<0>'
+  Total number of paths / destination ports: 72 / 39
+-------------------------------------------------------------------------
+Offset:              4.162ns (Levels of Logic = 2)
+  Source:            okHI/core0/core0/a0/c0/atmel_dout (FF)
+  Destination:       okAA (PAD)
+  Source Clock:      okUH<0> rising +-24
+
+  Data Path: okHI/core0/core0/a0/c0/atmel_dout to okAA
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDSE:C->Q             2   0.525   0.725  core0/a0/c0/atmel_dout (okCH<35>)
+     end scope: 'okHI/core0:okCH<35>'
+     IOBUF:I->IO               2.912          okHI/tbuf (okAA)
+    ----------------------------------------
+    Total                      4.162ns (3.437ns logic, 0.725ns route)
+                                       (82.6% logic, 17.4% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock U0/clk_track
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+U0/clk_track   |    3.438|    4.088|    6.501|         |
+X2/WE_X0       |         |         |    6.965|         |
+X2/WE_X1       |         |         |    2.572|         |
+okUH<0>        |         |         |    2.810|         |
+sys_clkp       |         |    1.280|         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock X2/WE_X0
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+X2/WE_X0       |    3.456|         |         |         |
+okUH<0>        |    2.720|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock X2/WE_X1
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+okUH<0>        |    2.720|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock okHI/core0/okHE<41>
+-------------------+---------+---------+---------+---------+
+                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------+---------+---------+---------+---------+
+okHI/core0/okHE<41>|    3.081|         |         |         |
+-------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock okUH<0>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+U0/clk_track   |         |    5.544|         |         |
+okUH<0>        |    7.818|         |         |         |
+sys_clkp       |         |    6.126|         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock sys_clkp
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+U0/clk_track   |         |         |    5.408|         |
+okUH<0>        |    5.506|         |    2.720|         |
+sys_clkp       |    5.998|    1.324|    4.497|         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 8.31 secs
+ 
+--> 
+
+Total memory usage is 4527340 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   22 (   0 filtered)
+Number of infos    :   40 (   0 filtered)
+
